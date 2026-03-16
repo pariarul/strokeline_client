@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import { fetchContent } from "@/lib/supabase";
 import ExpertiseClient from "./ExpertiseClient";
 
+export const revalidate = 0;
+
 export default async function Expertise() {
   const [stats, contact, expertise] = await Promise.all([
     fetchContent("site_stats"),

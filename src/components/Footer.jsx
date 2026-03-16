@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MapPin, Linkedin, Instagram, Twitter, MessageCircle, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -25,9 +26,11 @@ const Footer = ({ data }) => {
           <div className="lg:col-span-5 space-y-10">
             <Link href="/" className="flex items-center gap-4 group">
               <div className="w-9 h-9  flex items-center justify-center rounded-xl shadow-[0_8px_16px_-4px_rgba(255,138,0,0.4)] group-hover:rotate-12 transition-transform">
-                <img
+                <Image
                   src="/logo.png"
                   alt="Company Logo"
+                  width={72}
+                  height={72}
                   className="w-18 h-18 object-contain"
                 />
               </div>

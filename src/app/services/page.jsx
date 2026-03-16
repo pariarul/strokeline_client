@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import { fetchList, fetchContent } from "@/lib/supabase";
 import ServicesClient from "./ServicesClient";
 
+export const revalidate = 0;
+
 export default async function Services() {
   const [servicesData, contact] = await Promise.all([
     fetchList("site_services"),

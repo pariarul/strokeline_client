@@ -1,6 +1,8 @@
 import { fetchContent, fetchList } from "@/lib/supabase";
 import HomeClient from "./HomeClient";
 
+export const revalidate = 0;
+
 export default async function Home() {
   const [hero, about, stats, services, contact] = await Promise.all([
     fetchContent("site_hero"),

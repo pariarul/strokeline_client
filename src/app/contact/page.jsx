@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import { fetchContent } from "@/lib/supabase";
 import ContactClient from "./ContactClient";
 
+export const revalidate = 0;
+
 export default async function Contact() {
   const content = await fetchContent("site_contact");
 

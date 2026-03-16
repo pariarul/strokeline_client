@@ -5,6 +5,8 @@ import { fetchContent } from "@/lib/supabase";
 import { Users, Target, Rocket, Award, CheckCircle2 } from "lucide-react";
 import AboutClient from "./AboutClient";
 
+export const revalidate = 0;
+
 export default async function About() {
   const [content, contact] = await Promise.all([
     fetchContent("site_about"),

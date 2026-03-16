@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,10 +38,13 @@ const Navbar = () => {
 
     {/* LEFT LOGO */}
     <Link href="/" className="flex items-center gap-3 group">
-      <img
+      <Image
         src="/Strokeline_logo.png"
         alt="Strokeline Logo"
+        width={180}
+        height={48}
         className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
+        priority
       />
     </Link>
 
